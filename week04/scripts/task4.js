@@ -13,7 +13,7 @@
 // Step 9: Add additional objects with the same properties for each place you've lived
 let myInfo = {
     name: 'Amy Jo Hollingworth',
-    photo: 'week02/images/Beautiful_Amy.jpg',
+    photo: 'images/Beautiful_Amy.jpg',
     favoriteFoods: ['Steak', 'Baked Potato', 'Desserts', 'Shrimp'],
     hobbies: ['Reading', 'Tatting', 'Painting', 'Traveling'],
     placesLived: [
