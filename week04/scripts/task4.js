@@ -74,7 +74,7 @@ myInfo.placesLived.forEach(nextPlace => {
 
     let placeLength = document.createElement('dd');
     placeLength.textContent = nextPlace.length;
-
+    
     document.querySelector('#places-lived').append(placeName);
     document.querySelector('#places-lived').append(placeLength);
 });
