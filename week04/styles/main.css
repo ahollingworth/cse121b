@@ -24,6 +24,8 @@ label {
     display: inline-block;
     min-width: 120px;
     text-align: right;
+    color:blueviolet;
+    font-size: 20px;
 }
 
 nav {
@@ -70,7 +72,17 @@ nav ul li a:hover {
 .open li {
     display: block;
 }
-
+table{
+    display:inline-block;
+    align-items: center;
+}
+table, th, td{
+    border: 1px solid;
+    padding: .5rem;
+  }
+th{
+  background-color: blue;
+}
 /* ID Selectors */
 #favorite-foods, #hobbies, #places-lived {
     margin: 0;
