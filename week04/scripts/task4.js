@@ -68,13 +68,18 @@ myInfo.hobbies.forEach(hobby => {
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
-myInfo.placesLived.forEach(nextPlace => {
-    let placeName = document.createElement('dt');
-    placeName.textContent = nextPlace.place;
+const table = document.querySelector('table');
 
-    let placeLength = document.createElement('dd');
+myInfo.placesLived.forEach((nextPlace) => {
+    let tr = document.createElement('tr');
+    let placeName = document.createElement('td');
+    let placeLength = document.createElement('td');
+
+    placeName.textContent = nextPlace.place;
     placeLength.textContent = nextPlace.length;
     
-    document.querySelector('#places-lived').append(placeName);
-    document.querySelector('#places-lived').append(placeLength);
+    tr.appendChild(placeName);
+    tr.appendChild(placeLength);
+
+    table.appendChild(tr);
 });
