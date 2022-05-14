@@ -18,8 +18,8 @@ let myInfo = {
     hobbies: ['Reading', 'Tatting', 'Painting', 'Traveling'],
     placesLived: [
         {place: 'Las Vegas, NV',
-         length: '8 years'},
-         {place: 'Walnut Creek, CA',
+        length: '8 years'},
+        {place: 'Walnut Creek, CA',
         length: '2.5 years'},
         {place: 'Mclean, VA',
         length: '4.5 years'},
