@@ -101,10 +101,17 @@ const getTemples = async() => {
     output(templeList);
 }
 
+// fetch('https://byui-cse.github.io/cse121b-course/week05/temples.json')
+//     .then(response => response.json())
+//     .then(temples => {
+//         templeList = temples;
+//         output(templeList);
+//     });
+
 
 getTemples();
 const reset = () => {
-    document.querySelector("#temples").innerHTML = "";
+    document.querySelector("#temples").innerHTML = '';
   };
 
 // Step 4: Add a .then() method to turn the returned string into a JavaScript object ( hint: .json() )
@@ -154,8 +161,7 @@ const sortBy = () => {
           templeList.sort((temple1, temple2) =>
             temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()
               ? 1
-              : temple2.templeName.toLowerCase() >
-                temple1.templeName.toLowerCase()
+              : temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase()
               ? -1
               : 0
           )
