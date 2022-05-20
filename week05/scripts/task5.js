@@ -121,9 +121,51 @@ const reset = () => {
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
 // - Calls the output function passing in the sorted list of temples
-
+const sortBy = () => {
+    reset();
+  
+    let filter = document.querySelector("#sortBy").value;
+  
+    switch (filter) {
+      case "templeNameAscending":
+        output(
+          templeList.sort((temple1, temple2) => {
+            let templeName1 = temple1.templeName.toLowerCase();
+            let templeName2 = temple2.templeName.toLowerCase();
+            if (templeName1 < templeName2) return -1;
+            else if (templeName1 > templeName2) return 1;
+            else return 0;
+          })
+        );
+        break;
+      case "templeNameDescending":
+        output(
+          templeList.sort((temple1, temple2) => {
+            let templeName1 = temple1.templeName.toLowerCase();
+            let templeName2 = temple2.templeName.toLowerCase();
+            if (templeName1 > templeName2) return -1;
+            else if (templeName1 < templeName2) return 1;
+            else return 0;
+          })
+        );
+        break;
+      default:
+        output(
+          templeList.sort((temple1, temple2) =>
+            temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()
+              ? 1
+              : temple2.templeName.toLowerCase() >
+                temple1.templeName.toLowerCase()
+              ? -1
+              : 0
+          )
+        );
+        break;
+    }
+  };
+  
 // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
-
+document.querySelector("#sortBy").addEventListener("change", sortBy);
 
 /* STRETCH */
 
