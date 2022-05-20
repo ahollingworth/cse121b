@@ -79,7 +79,7 @@ const output = (temples) =>{
             let dedicated = document.createElement('h4');
             dedicated.textContent = temple.dedicated;
             let img = document.createElement('img');
-            img.setAttribute('src', temple.imgUrl);
+            img.setAttribute('src', temple.imageUrl);
             img.setAttribute('alt', temple.templeName);
 
             article.appendChild(templeName);
@@ -157,18 +157,15 @@ const sortBy = () => {
         );
         break;
       default:
-        output(
-          templeList.sort((temple1, temple2) =>
-            temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()
-              ? 1
-              : temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase()
-              ? -1
-              : 0
+        output(templeList.sort(
+            (temple1, temple2) =>
+            temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase() ? 1 : 
+            temple2.templeName.toLowerCase() > temple1.templeName.toLowerCase() ? -1 : 0
           )
         );
         break;
     }
-  };
+  }
   
 // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 document.querySelector("#sortBy").addEventListener("change", sortBy);

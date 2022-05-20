@@ -151,5 +151,3 @@ function draw() {
 }
 
 var interval = setInterval (draw, 10);
-
-
