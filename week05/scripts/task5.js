@@ -78,7 +78,7 @@ const output = (temples) =>{
             location.textContent = temple.location;
             let dedicated = document.createElement('h4');
             dedicated.textContent = temple.dedicated;
-            let img = document.createElement('h4');
+            let img = document.createElement('img');
             img.setAttribute('src', temple.imgUrl);
             img.setAttribute('alt', temple.templeName);
 
@@ -93,15 +93,20 @@ const output = (temples) =>{
     )
 }
 // Step 3: Using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'
-fetch("https://byui-cse.github.io/cse121b-course/week05/temples.json");
-let results = null;
-async function getTemples(url) {
-    const response = await fetch(url);
-    if (response.ok) {
-        const temples = await response.json();
-        output(temples);
-    }
+
+
+const getTemples = async() => {
+    const response = await fetch('https://byui-cse.github.io/cse121b-course/week05/temples.json');
+    templeList = await response.json();
+    output(templeList);
 }
+
+
+getTemples();
+const reset = () => {
+    document.querySelector("#temples").innerHTML = "";
+  };
+
 // Step 4: Add a .then() method to turn the returned string into a JavaScript object ( hint: .json() )
 
 // Step 5: Add another .then() method with a variable name to hold the temples and an empty arrow function
