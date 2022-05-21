@@ -78,7 +78,9 @@ section {
     text-align: center;
 }
 
-
+.weather {
+    width: 70%;
+}
 /* Class Selectors */
 .active {
     background-color: white;
