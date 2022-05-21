@@ -26,27 +26,32 @@
         <h1>Weather Where You Are</h1>
     </header>
     <main>
-        <div id=image></div>
+        <div>
+            <img src="images/placeholder.png" alt="Photo">
+        </div>
         <article>
             <h2>Locating Your Weather Forecast</h2>
             <div>
                 <label for="zipcode">Zip Code</label>
                 <input type="text" id="zipcode" name="zipcode">
             </div>
-            <h2>Current Forecast</h2>
+
             <div>
-                <input type="button" id="findzip" value="Submit">
+                <input type="button" id="submit" value="Submit">
             </div>
         </article>
         <section>
+            <h2>Current Forecast</h2>
+            <hr>
             <div id="forecast"></div>
+            <hr>
         </section>
     </main>
     <footer>
         &copy;<span id="year"></span> | Controlling Your Code | Lesson 5
     </footer>
     <script src="../week05/scripts/main.js"></script>
-    <script src="task6.js"></script>
+    <script src="scripts/task6.js"></script>
 </body>
 
 </html>
