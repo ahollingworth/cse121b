@@ -77,8 +77,27 @@ nav ul li a:hover {
 section {
     text-align: center;
 }
+.container {
+    block-size: 300px;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color: aqua;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#notification {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+#weather-container {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin: 30px;
 
-.weather {
+}
+.weatherPic {
     width: 70%;
 }
 /* Class Selectors */
