@@ -44,6 +44,7 @@ const output = (forecasts) => {
   article.appendChild(img);
   article.appendChild(tempValue);
   article.appendChild(tempDesc);
+  article.appendChild(location);
 
   document.querySelector("#forecasts").appendChild(article);
 };
