@@ -8,9 +8,14 @@ const key = "e8bda0393ca6a425bd461f9fb06864cd";
 
 document.querySelector("#submit").addEventListener("click", setCity);
 
+const reset = () => {
+  document.querySelectorAll("#city, #state").value = "";
+};
+
 function setCity() {
   let cityName = document.querySelector("#city").value;
-  getWeather(cityName);
+  let stateName = document.querySelector("#state").value;
+  getWeather(cityName, stateName);
 }
 
 function showError() {
