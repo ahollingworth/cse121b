@@ -36,6 +36,11 @@ const output = (forecasts) => {
   let tempDesc = document.createElement("h3");
   tempDesc.textContent = forecasts.weather[0].description;
 
+  let location = document.createElement("h3");
+  location.textContent = `Feels like: ${Math.floor(
+    forecasts.main.feels_like
+  )}°F`;
+
   article.appendChild(img);
   article.appendChild(tempValue);
   article.appendChild(tempDesc);
@@ -43,9 +48,9 @@ const output = (forecasts) => {
   document.querySelector("#forecasts").appendChild(article);
 };
 
-const getWeather = async (city) => {
+const getWeather = async (city, state) => {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&appid=${key}&units=imperial`
   );
   if (response.ok) {
     let weather = await response.json();
