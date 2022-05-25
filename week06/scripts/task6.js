@@ -16,12 +16,6 @@ function setCity() {
   getWeather(cityName, stateName);
 }
 
-function showError() {
-  const notificationElement = document.querySelector("#notification");
-  notificationElement.style.display = "block";
-  notificationElement.innerHTML = `<p>There is no city found.</p>`;
-}
-
 const output = (forecasts) => {
   let article = document.createElement("article");
 
